@@ -2,8 +2,6 @@
 
 A simple Slack app that updates your Slack status to the game you currently play on Steam, the song you listen to on Spotify, or a recent reaction you got to one of your messages on Slack.
 
-This app uses the [Bolt for Slack](https://slack.dev/bolt/concepts) framework.
-
 ## Firebase configuration
 
 1. Create a [new Firebase project](https://console.firebase.google.com/)

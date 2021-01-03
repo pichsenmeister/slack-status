@@ -40,8 +40,7 @@ This app uses the [Bolt for Slack](https://slack.dev/bolt/concepts) framework.
 ## Steam configuration
 
 1. Get a Steam API key [here](https://steamcommunity.com/dev/apikey)
-2. Get your numeric Steam ID 
-  - Add your `STEAM_API_KEY` to the `.env` file and call `https://<region>-<firebase-project-id>.cloudfunctions.net/steamId?username=<your Steam display name>`
+2. Get your numeric Steam ID: `https://<region>-<firebase-project-id>.cloudfunctions.net/steamId?username=<your Steam display name>`
 3. Set steam id in Firebase config: `firebase functions:config:set steam.user_id="xxxxxx"  
 
 ## Spotify configuration

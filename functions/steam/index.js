@@ -45,7 +45,7 @@ const isGameStatus = status => {
     const key = status.emoji.replace(/:/g, "");
     return (
         status.text.startsWith("playing") &&
-        (status.emoji === ":video_game:" || emojis[key])
+        (status.emoji === ":video_game:" || status.emoji === emojis[key])
     );
 };
 

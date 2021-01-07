@@ -1,6 +1,6 @@
 # Slack Status
 
-A simple Slack app that updates your Slack status to the game you currently play on Steam, the song you listen to on Spotify, or a recent reaction you got to one of your messages on Slack.
+A simple Slack app that updates your Slack status to the game you're currently playing on Steam, the song you're listening to on Spotify, or a recent reaction you got to one of your messages on Slack.
 
 ## Firebase configuration
 

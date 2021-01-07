@@ -44,6 +44,6 @@ A simple Slack app that updates your Slack status to the game you currently play
 ## Spotify configuration
 
 1. Create a Spotify app [here](https://developer.spotify.com/dashboard/applications)
-2. Set client id, client secret and redirect url in your Firebase config: firebase functions:config:set spotify.client_id="xxxxxx" spotify.client_secret="xxxxxx" spotify.redirect_uri="https://<region>-<firebase-project-id>.cloudfunctions.net/spotifyOAuth"`
+2. Set client id, client secret and redirect url in your Firebase config: `firebase functions:config:set spotify.client_id="xxxxxx" spotify.client_secret="xxxxxx" spotify.redirect_uri="https://<region>-<firebase-project-id>.cloudfunctions.net/spotifyOAuth"`
 3. Get a refresh token by going through the OAUTH flow `https://<region>-<firebase-project-id>.cloudfunctions.net/spotifyConnect`
 4. Set refresh token in Firebase config: `firebase functions:config:set spotify.refresh_token="xxxxxx"` 

@@ -37,7 +37,7 @@ A simple Slack app that updates your Slack status to the game you're currently p
 
 ## Steam configuration
 
-(Note: This requires that your Steam profile and game details is public. You can find these settings in your Steam profile under `View Profile > Edit Profile > Privacy Settings`. Ensure that `My profile: Public` and `Game details: Public` are set.)
+(Note: This requires that your Steam profile and game details are public. You can find these settings in your Steam profile under `View Profile > Edit Profile > Privacy Settings`. Ensure that `My profile: Public` and `Game details: Public` are set.)
 
 1. Get a Steam API key [here](https://steamcommunity.com/dev/apikey)
 2. Get your numeric Steam ID: `https://<region>-<firebase-project-id>.cloudfunctions.net/steamId?username=<your Steam display name>`

@@ -28,7 +28,7 @@ A simple Slack app that updates your Slack status to the game you're currently p
 1. Create an [app](https://api.slack.com/apps) on Slack
 2. Enable `Event Subscription`
   - Request url: `https://<region>-<firebase-project-id>.cloudfunctions.net/events`
-  - Subscribe to `events on behalf of a user`: `reaction_added`
+  - Subscribe to `events on behalf of a user`: `reaction_added`, `reaction_removed`
 3. Add `User Token Scopes` in `OAuth & Permissions`
   - `reactions:read`
   - `users.profile:write`

@@ -31,6 +31,7 @@ A simple Slack app that updates your Slack status to the game you're currently p
   - Subscribe to `events on behalf of a user`: `reaction_added`, `reaction_removed`
 3. Add `User Token Scopes` in `OAuth & Permissions`
   - `reactions:read`
+  - `users.profile:read`
   - `users.profile:write`
 4. Install App
 5. Set token in Firebase config: `firebase functions:config:set slack.token="xoxp-xxxxxx"`

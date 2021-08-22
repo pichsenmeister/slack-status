@@ -70,10 +70,13 @@ const unsetStatus = async () => {
 };
 
 const setStatus = async (gameInfo, emoji) => {
+    let statusText = `playing ${gameInfo}`
+    if (statusText.length > 100) statusText = statusText.substring(0, 97) + '...'
+
     await app.client.users.profile.set({
         token: functions.config().slack.token,
         profile: {
-            status_text: `playing ${gameInfo}`,
+            status_text: statusText,
             status_emoji: `${emoji}`,
             status_expiration: 0
         }

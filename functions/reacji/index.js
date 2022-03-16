@@ -21,8 +21,12 @@ const events = async (event, res) => {
     // and if it's on a message sent by myself
     if (auth.user_id !== event.user && auth.user_id === event.item_user) {
         if (event.type === 'reaction_added') {
-            const expiration = ((new Date()).getTime() / 1000) + 3600
-            await setStatus(`via <@${event.user}>`, `:${event.reaction}:`, expiration)
+            const res = await getChannelInfo(event.item.channel)
+            const isPublicChannel = res.channel.is_channel || false
+            if (isPublicChannel) {
+                const expiration = ((new Date()).getTime() / 1000) + 3600
+                await setStatus(`via <@${event.user}>`, `:${event.reaction}:`, expiration)
+            }
         }
         if (event.type === 'reaction_removed') {
             const status = await getStatus()
@@ -34,6 +38,13 @@ const events = async (event, res) => {
     }
 
     return res.send()
+}
+
+const getChannelInfo = async (channelId) => {
+    return await app.client.conversations.info({
+        token: functions.config().slack.token,
+        channel: channelId
+    })
 }
 
 const setStatus = async (text, emoji, expiration) => {
